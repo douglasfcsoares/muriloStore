@@ -1,0 +1,1 @@
+alert('Teste de importação de script');
