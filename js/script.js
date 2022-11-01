@@ -1,1 +1,1 @@
-alert('Teste de importação de script');
+//alert('Teste de importação de script');

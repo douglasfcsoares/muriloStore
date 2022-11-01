@@ -1,3 +1,5 @@
+/**####################################--GERAL--*/
+
 * {
   margin: 0;
   padding: 0;
@@ -6,5 +8,250 @@
 }
 
 body {
-  background-color: blue;
+  background: #090f1c;
 }
+
+.flex {
+  display: flex;
+}
+
+#box_header_01 {
+  position: relative;
+  width: 10%;
+  height: 100px;
+}
+
+#box_header_02 {
+  position: relative;
+  width: 15%;
+  height: 100px;
+}
+
+#box_header_03 {
+  position: relative;
+  width: 50%;
+  height: 100px;
+}
+
+#box_header_04 {
+  position: relative;
+  width: 15%;
+  height: 100px;
+}
+
+#box_header_05 {
+  position: relative;
+  width: 10%;
+  height: 100px;
+}
+
+/**####################################--HEADER--*/
+
+header {
+  background-color: #0f1a33;
+  display: flex;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+#menuBars {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  width: 80px;
+  height: 50px;
+  background-image: url('../assets/images/menu_lines.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#graphic {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 80px;
+  height: 60px;
+  background-image: url('../assets/images/graphic.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#conversor {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -20px;
+  width: 70%;
+  height: 60px;
+  background-image: url('../assets/images/conversor.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#moeda {
+  width: 45px;
+  height: 45px;
+  background-image: url('../assets/images/moedaLogo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#logo {
+  margin-top: 1rem;
+  width: 100%;
+  height: 4rem;
+  background-image: url('../assets/images/logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#conta {
+  margin-top: 2rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2rem;
+}
+
+#box_header_04 h2 {
+  margin-top: -10px;
+  margin-left: 15px;
+  color: #fff;
+  font-size: 5.5rem;
+}
+
+#shoppingCar {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 85px;
+  background-image: url('../assets/images/shoppingCar.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+/**####################################--BANNER PRINCIPAL--*/
+#banner_principal {
+  margin-top: 2rem;
+  background-image: url('../assets/images/banner_principal.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 450px;
+}
+
+#divider_neon {
+  background-image: url('../assets/images/linha_neon.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  margin-top: 4rem;
+  width: 100%;
+  height: 30px;
+}
+
+/**####################################--GAMES MENU--*/
+
+.container_games_menu {
+  width: 100%;
+  height: 38rem;
+}
+
+#banners_games {
+  position: absolute;
+  left: 250px;
+}
+
+#box_games_01 {
+  position: absolute;
+  left: -150px;
+  margin-top: 4rem;
+  width: 450px;
+  height: 450px;
+  background-image: url('../assets/images/image_menu_rocketLeague.png');
+}
+
+#box_games_02 {
+  position: absolute;
+  left: 140px;
+  margin-top: 4rem;
+  width: 450px;
+  height: 450px;
+  background-image: url('../assets/images/image_menu_valorant.png');
+}
+
+#box_games_03 {
+  position: absolute;
+  left: 430px;
+  margin-top: 4rem;
+  width: 450px;
+  height: 450px;
+  background-image: url('../assets/images/image_menu_lol.png');
+}
+
+#box_games_04 {
+  position: absolute;
+  left: 720px;
+  margin-top: 4rem;
+  width: 450px;
+  height: 450px;
+  background-image: url('../assets/images/image_menu_csgo.png');
+}
+
+#box_games_05 {
+  position: absolute;
+  left: 1010px;
+  margin-top: 4rem;
+  width: 450px;
+  height: 450px;
+  background-image: url('../assets/images/image_menu_fortnite.png');
+
+}
+
+/**####################################--Navigation--*/
+
+nav ul {
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 1.2rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+
+/**####################################--GRID SKINS--*/
+
+.grid_skin {
+  justify-content: space-evenly;
+  margin: 5rem 0;
+}
+
+.container_skin {
+  width: 15%;
+  height: 40vh;
+  background-image: url('../assets/images/container_skin.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container_skin img {
+  justify-content: center;
+  width: 90%;
+  padding: 6rem 1rem;
+}
+
+/**####################################--BODY--*/
