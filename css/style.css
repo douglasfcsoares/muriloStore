@@ -6,8 +6,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color-menu-dorpdown: #0f1a33;
+  --color-primary-menu-dropdown: #20c7dc;
+}
+
 body {
   background: #090f1c;
+  font-family: sans-serif;
 }
 
 .flexRow {
@@ -91,6 +97,7 @@ header {
   background-image: url("../assets/images/conversor.png");
   background-size: contain;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 #moeda {
@@ -108,6 +115,7 @@ header {
   background-image: url("../assets/images/logo.png");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 #conta {
@@ -116,6 +124,7 @@ header {
   text-transform: uppercase;
   color: #fff;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 #box_header_04 h2 {
@@ -136,6 +145,7 @@ header {
   background-image: url("../assets/images/shoppingCar.png");
   background-size: contain;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 /**####################################--BANNER PRINCIPAL--*/
@@ -217,23 +227,59 @@ header {
 
 /**####################################--Navigation--*/
 
-nav ul {
-  justify-content: center;
+.menuDropDown ul {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
-nav ul li {
+.menuDropDown ul li {
+  display: inline-block;
+  margin: 0 auto;
+
   list-style: none;
   padding: 1.2rem;
 }
 
-nav ul li a {
+.menuDropDown ul li a {
   color: #fff;
   text-decoration: none;
   font-family: sans-serif;
   font-weight: 400;
   font-size: 2rem;
+  cursor: pointer;
 }
 
+.menuDropDown ul li img {
+  width: 30px;
+  height: 30px;
+}
+
+.menuDropDown ul li ul {
+  position: absolute;
+  display: none;
+  border-radius: 2rem;
+  background: var(--bg-color-menu-dorpdown);
+  padding: 20px;
+}
+
+.menuDropDown ul li:hover ul {
+  display: block;
+  width: 250px;
+}
+
+.menuDropDown ul li ul li {
+  display: flex;
+  padding: 5px;
+}
+
+.menuDropDown ul li ul li a {
+  color: var(--color-primary-menu-dropdown);
+  font-size: 0.9rem;
+}
+
+.menuDropDown ul li ul li a:hover {
+  text-shadow: 2px 2px 5px #20c7dc;
+}
 /**####################################--GRID SKINS--*/
 
 .grid_skin {
@@ -244,7 +290,7 @@ nav ul li a {
 
 .container_skin {
   display: flex;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
   width: 15%;
   height: 40vh;
@@ -255,12 +301,13 @@ nav ul li a {
 
 .container_skin img {
   width: 80%;
+  height: 130px;
+  margin: 0 auto;
 }
 
 .container_skin h2,
 .container_skin h3 {
-  position: relative;
-  left: -2rem;
+  padding-left: 2rem;
   text-transform: uppercase;
   font-family: sans-serif;
   color: #ffffff;
@@ -273,13 +320,13 @@ nav ul li a {
 
 .container_skin h3 {
   margin-top: 2rem;
-  left: -3.5rem;
   font-size: 1rem;
 }
 
 .container_skin .price {
-  width: 100%;
   align-items: center;
+  bottom: 1rem;
+  width: 50%;
 }
 
 .container_skin .price img {
@@ -289,7 +336,7 @@ nav ul li a {
 }
 
 .container_skin .price h2 {
-  margin-left: 20px;
+  margin-left: -30px;
   margin-top: 25px;
 } /**####################################--BODY--*/
 
@@ -320,4 +367,123 @@ footer #logoFooter {
 #iconsRedesSociais {
   display: flex;
   justify-content: space-around;
+}
+
+/** #################################################### Modal*/
+
+button {
+  padding: 0;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.4s;
+}
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container.mostrar {
+  display: flex;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.mostrar .modal {
+  animation: modal 0.4s;
+}
+
+.modal {
+  max-width: 60%;
+  width: 900px;
+  background-color: var(--bg-color-menu-dorpdown);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.modal-tour img {
+  height: 500px;
+}
+
+.modal-cotacao,
+.modal-shoppingCar {
+  background: var(--bg-color-menu-dorpdown);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.modal-cotacao img,
+.modal-shoppingCar img {
+  width: 1000px;
+}
+
+.modalHeader {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.modalHeader img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40px;
+  width: 450px;
+}
+
+.modalHeader button img {
+  position: relative;
+  top: -80px;
+  width: 40px;
+}
+
+.modalBody form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+}
+
+form div input {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #375065;
+  border-radius: 15px;
+  color: #b9c1c9;
+}
+
+form input[type="button"] {
+  background-color: var(--color-primary-menu-dropdown);
+  color: #090f1c;
+  width: 200px;
+  margin: 0 auto;
 }
